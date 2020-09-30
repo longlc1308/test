@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		// function welcome(){
+		// 	alert("Xin chào các bạn!");
+		// }
+		function welcome(){
+			var userName=fname.ten.value;
+			alert(userName);
+		}
+	</script>
+</head>
+<body>
+  	<!-- <form>
+  	<div style="height: 50px">Tên đăng nhập: <input onblur="welcome();" type="text" name="username" /></div>
+   	<div style="height: 50px">Mật khẩu: <input type="password" name="pass" /></div>
+   	<input type="submit" value="Login" />
+   	<input type="reset" value="Reset" />
+
+	</form> -->
+	<form name="fname" onsubmit="welcome();">
+		Name: <input type="text" name="ten">
+		<input type="submit" name="Submit form" value="submit">
+	</form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var danhsach = Array (
+			["Nguyễn Văn A",[5,3,8]],
+			["Nguyễn Văn D",[6,3,8]],
+			["Nguyễn Văn B",[5,9,8]]
+			)
+		for ( x in danhsach){
+			var diem = danhsach[x][1];
+			var tongdiem = 0;
+			for (y in diem){
+				tongdiem += diem[y];
+			}
+			danhsach[x][1] = Math.round(tongdiem / diem.length);
+			document.write(danhsach[x] + "<br>");
+		}
+	</script>
+	
+</body>
+</html>

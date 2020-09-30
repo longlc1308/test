@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var student = { "ho" : "Luu" , "ten": "Long", "namsinh" : 1999, "gioitinh" : 1};
+		var ketqua = {};
+		ketqua["hoten"] = student["ho"] + " " + student["ten"];
+		ketqua["tuoi"] = 2020 - student["namsinh"];
+		ketqua["gioitinh"] = (student["gioitinh"] == 1) ? "Nam" : " Nu";
+		for ( x in ketqua){
+			document.write(x + " " + ":" + ketqua[x] + "<br>");
+		}
+	</script>
+	
+</body>
+</html>

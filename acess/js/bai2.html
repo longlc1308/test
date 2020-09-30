@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function  tong() {
+			var a = document.getElementById("so1").value;
+			var b = document.getElementById("so2").value;
+			parseFloat(a);
+			parseFloat(b);
+			var tong = Number(a) + Number(b);
+			console.log(tong);
+			document.getElementById("hienthi").innerHTML = tong;
+
+		}
+		function  hieu() {
+			var a = document.getElementById("so1").value;
+			var b = document.getElementById("so2").value;
+			parseFloat(a);
+			parseFloat(b);
+			var hieu = Number(a) - Number(b);
+			console.log(hieu);
+			document.getElementById("hienthi").innerHTML = hieu;
+
+		}
+		function  tich() {
+			var a = document.getElementById("so1").value;
+			var b = document.getElementById("so2").value;
+			parseFloat(a);
+			parseFloat(b);
+			var tich = Number(a) * Number(b);
+			console.log(tich);
+			document.getElementById("hienthi").innerHTML = tich;
+
+		}function  thuong() {
+			var a = document.getElementById("so1").value;
+			var b = document.getElementById("so2").value;
+			parseFloat(a);
+			parseFloat(b);
+			var thuong = Number(a) / Number(b);
+			console.log(thuong);
+			document.getElementById("hienthi").innerHTML = thuong;
+		}
+		function  khaican() {
+			var a = document.getElementById("so1").value;
+			var b = document.getElementById("so2").value;
+			parseFloat(a);
+			parseFloat(b);
+			var result;
+			if ( a == ""){
+				result = Math.sqrt(b);
+			}
+			else {
+				result = Math.sqrt(a);
+			}
+			document.getElementById("hienthi").innerHTML = result;
+		}
+		function  trituyetdoi() {
+			var a = document.getElementById("so1").value;
+			var b = document.getElementById("so2").value;
+			parseFloat(a);
+			parseFloat(b);
+			var result;
+			if ( a == ""){
+				result = Math.abs(b);
+			}
+			else {
+				result = Math.abs(a);
+			}
+			document.getElementById("hienthi").innerHTML = result;
+		}
+		function  lamtron() {
+			var a = document.getElementById("so1").value;
+			var b = document.getElementById("so2").value;
+			parseFloat(a);
+			parseFloat(b);
+			var result;
+			if ( a == ""){
+				result = Math.round(b);
+			}
+			else {
+				result = Math.round(a);
+			}
+			document.getElementById("hienthi").innerHTML = result;
+		}
+		
+		
+	</script>
+</head>
+<body>
+	<form name="calculator">
+		<table border="1">
+			<tr>
+				<td colspan="2" style="text-align: center">Ứng dụng máy tính đơn giản</td>
+			</tr>
+			<tr>
+				<td>Nhập số thứ nhất</td>
+				<td> <input type="text" id="so1"></td>
+			</tr>
+			<tr>
+				<td>Nhập số thứ hai</td>
+				<td> <input type="text" id="so2"></td>
+			</tr>
+			<tr>
+				<td>Lựa chọn phép toán</td>
+				<td> <input type="button" name="" value="+" onclick="tong()"> <input type="button" name="" value="-" onclick="hieu()"> <input type="button" name="" value="x" onclick="tich()"> <input type="button" name="" value="/" onclick="thuong()"></td>
+			</tr>
+			<tr>
+				<td>Các phép toán khác</td>
+				<td> <input type="button" name="" value="Sqrt" onclick="khaican()"> <input type="button" name="" value="Abs" onclick="trituyetdoi()"> <input type="button" name="" value="Ceil" onclick="lamtron()"></td>
+			</tr>
+			<tr>
+				<td>Kết quả</td>
+				<td><div id="hienthi"><div></td>
+			</tr>
+
+		</table>
+	</form>
+	
+</body>
+</html>

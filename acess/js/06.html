@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		var enter = "<br>";
+		String.prototype.tachten = function(){
+			var result;
+			var spaceFirst = this.indexOf(" ");
+			var spaceLast = this.lastIndexOf(" ");
+			var ho = this.slice(0,spaceFirst);
+			var ten = this.slice(spaceLast);
+			var tendem = this.slice(spaceFirst,spaceLast);
+			if ( spaceFirst > 0 && spaceLast > 0){
+			result = "Họ: " + ho + enter;
+			result += "Đệm: " + tendem + enter;
+			result += "Tên: " + ten + enter;
+			}
+			else {
+			result = " Dữ liệu không hợp lệ ";
+			}
+			return result;
+			
+		};
+		function splitname(){
+			var hoten = new String();
+			hoten = document.getElementById("ho-ten").value;
+			document.getElementById("ketqua").innerHTML= hoten.tachten();
+		}
+	</script>
+</head>
+<body>
+	<div class="noidung">
+		<input type="text" id="ho-ten">
+		<input type="button" name="" value="click here" onclick="splitname()">
+		<div id="ketqua"></div>
+		
+	</div>
+	
+</body>
+</html>
